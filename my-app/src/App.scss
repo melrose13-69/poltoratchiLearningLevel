@@ -1,0 +1,25 @@
+@import "./scss/variables";
+
+body {
+  scrollwidth: none;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.app-wrapper {
+  margin: 0 auto;
+  &__content {
+    max-width: 65%;
+    margin: 110px auto 0 auto;
+    grid-area: content;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}
+
+img {
+  @include img;
+}

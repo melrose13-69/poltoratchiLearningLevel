@@ -1,0 +1,32 @@
+.wrapper {
+  max-height:210px;
+}
+.profileWrapper {
+  background: #fff;
+  height:max-content;
+}
+.content {
+  background: #fff;
+}
+
+.contentInner {
+  padding: 20px;
+  display: grid;
+  grid-gap: 10px;
+}
+.contentInner span {
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.contentInner span span {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.socialInner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
