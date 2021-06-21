@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Settings.module.scss';
 
-const Settings = () => {
+const Settings = props => {
     return (
         <div className={s.wrapper}>
             Settings

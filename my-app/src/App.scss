@@ -11,6 +11,7 @@ body {
 
 .app-wrapper {
   margin: 0 auto;
+  width: 100%;
   &__content {
     max-width: 65%;
     margin: 110px auto 0 auto;
@@ -18,6 +19,11 @@ body {
     border-radius: 6px;
     overflow: hidden;
   }
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 img {

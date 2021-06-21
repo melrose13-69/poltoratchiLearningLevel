@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Message.module.scss';
 
 
-const Message = (props) => {
+const Message = props => {
     return (
         <div data-send={props.action} className={s.message}>
             <div data-user-id={props.id} className={s.user}>

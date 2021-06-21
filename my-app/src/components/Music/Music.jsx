@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Music.module.scss';
 
-const Music = () => {
+const Music = props => {
     return (
         <div className={s.wrapper}>
             Music
