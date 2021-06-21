@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/poltoratchiLearningLevel/static/css/main.dc57f08f.chunk.css",
+    "main.js": "/poltoratchiLearningLevel/static/js/main.d4901022.chunk.js",
+    "main.js.map": "/poltoratchiLearningLevel/static/js/main.d4901022.chunk.js.map",
+    "runtime-main.js": "/poltoratchiLearningLevel/static/js/runtime-main.03ef428f.js",
+    "runtime-main.js.map": "/poltoratchiLearningLevel/static/js/runtime-main.03ef428f.js.map",
+    "static/js/2.53b63ef5.chunk.js": "/poltoratchiLearningLevel/static/js/2.53b63ef5.chunk.js",
+    "static/js/2.53b63ef5.chunk.js.map": "/poltoratchiLearningLevel/static/js/2.53b63ef5.chunk.js.map",
+    "static/css/3.92b344fb.chunk.css": "/poltoratchiLearningLevel/static/css/3.92b344fb.chunk.css",
+    "static/js/3.f7bad0c8.chunk.js": "/poltoratchiLearningLevel/static/js/3.f7bad0c8.chunk.js",
+    "static/js/3.f7bad0c8.chunk.js.map": "/poltoratchiLearningLevel/static/js/3.f7bad0c8.chunk.js.map",
+    "static/css/4.520729c0.chunk.css": "/poltoratchiLearningLevel/static/css/4.520729c0.chunk.css",
+    "static/js/4.301ae84d.chunk.js": "/poltoratchiLearningLevel/static/js/4.301ae84d.chunk.js",
+    "static/js/4.301ae84d.chunk.js.map": "/poltoratchiLearningLevel/static/js/4.301ae84d.chunk.js.map",
+    "static/js/5.81e16d8b.chunk.js": "/poltoratchiLearningLevel/static/js/5.81e16d8b.chunk.js",
+    "static/js/5.81e16d8b.chunk.js.map": "/poltoratchiLearningLevel/static/js/5.81e16d8b.chunk.js.map",
+    "index.html": "/poltoratchiLearningLevel/index.html",
+    "static/css/3.92b344fb.chunk.css.map": "/poltoratchiLearningLevel/static/css/3.92b344fb.chunk.css.map",
+    "static/css/4.520729c0.chunk.css.map": "/poltoratchiLearningLevel/static/css/4.520729c0.chunk.css.map",
+    "static/css/main.dc57f08f.chunk.css.map": "/poltoratchiLearningLevel/static/css/main.dc57f08f.chunk.css.map",
+    "static/js/2.53b63ef5.chunk.js.LICENSE.txt": "/poltoratchiLearningLevel/static/js/2.53b63ef5.chunk.js.LICENSE.txt",
+    "static/media/loader.5157a2e3.svg": "/poltoratchiLearningLevel/static/media/loader.5157a2e3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03ef428f.js",
+    "static/js/2.53b63ef5.chunk.js",
+    "static/css/main.dc57f08f.chunk.css",
+    "static/js/main.d4901022.chunk.js"
+  ]
+}
