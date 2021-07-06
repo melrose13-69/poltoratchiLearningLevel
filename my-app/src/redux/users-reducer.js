@@ -20,6 +20,8 @@ const initialState = {
     isFetching : false,
     followingProgress : []
 };
+
+
 const usersReducer = ( state = initialState, action ) => {
     switch( action.type ) {
         case SHOW_MORE_USERS:

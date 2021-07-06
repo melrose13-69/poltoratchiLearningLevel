@@ -7,7 +7,7 @@ import Login from './Login';
 const mapStateToProps = state => {
     return {
         isAuth: state.auth.isAuth,
-        captcha: state.auth.captcha
+        captcha: state.auth.captcha,
     };
 };
 

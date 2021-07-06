@@ -5,9 +5,10 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 
 const MainProfile = props => {
+
     return (
         <div className={ s.mainProfile }>
-            <ProfileInfo profile={ props.profile }/>
+            <ProfileInfo profile={ props.profile } isOwner={props.isOwner}/>
             <MyPostsContainer/>
         </div>
     );

@@ -6,14 +6,22 @@ const DELETE_POST = 'profile/DELETE_POST';
 const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
 const SET_STATUS_TEXT = 'profile/SET_STATUS_TEXT';
 const ADD_STATUS_TEXT = 'profile/ADD_STATUS_TEXT';
+const ADD_MAIN_PHOTO = 'profile/ADD_MAIN_PHOTO';
 
 const initialState = {
     posts : [
         { message : 'Hi, how a you?', likesCount : 10 },
         { message : 'It\'s my first post!', likesCount : 7 }
     ],
-    profile : null,
-    status : ''
+    profile : {
+        photos: {
+            large: '',
+            small: ''
+        },
+        contacts: {}
+    },
+    status : '',
+
 };
 
 const profileReducer = ( state = initialState, action ) => {
@@ -42,6 +50,15 @@ const profileReducer = ( state = initialState, action ) => {
                 ...state,
                 status : action.status
             };
+        case ADD_MAIN_PHOTO:
+
+            return {
+                ...state,
+                profile: {
+                    ...state.profile,
+                    photos: action.photos
+                }
+            };
         default:
             return state;
     }
@@ -52,6 +69,14 @@ export const deletePostAC = postId => ({ type : DELETE_POST, postId });
 export const setUserProfileAC = profile => ({ type : SET_USER_PROFILE, profile });
 export const setStatusTextAC = status => ({ type : SET_STATUS_TEXT, status });
 export const updateStatusTextAC = status => ({ type : ADD_STATUS_TEXT, status });
+export const savePhotoAC = photos => ({ type : ADD_MAIN_PHOTO, photos });
+
+export const savePhoto = file => async dispatch => {
+    const resp = await profileAPI.savePhoto( file );
+    if ( resp.resultCode === 0 ) {
+        dispatch( savePhotoAC( resp.data.photos ) );
+    }
+};
 
 export const addPost = newPostText => dispatch => {
     dispatch( addPostAC( newPostText ) );

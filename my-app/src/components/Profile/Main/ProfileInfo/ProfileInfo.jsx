@@ -1,36 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './ProfileInfo.module.scss';
 import Preloader from '../../../common/preloader/Preloader';
+import { ProfileContacts, ProfileForm } from './ProfileContacts/ProfileContacts';
 
 
 const ProfileInfo = props => {
-    const contacts = [];
+    const [editMode, setEditMode] = useState( false );
 
-    if ( props.profile === null || props.profile === undefined || props.profile === '' ) {
+    if ( props.profile === null || props.profile === undefined ) {
         return <Preloader/>;
     }
 
-    for ( let contact in props.profile.contacts ) {
-        if ( props.profile.contacts.hasOwnProperty( contact ) ) {
-            let data = props.profile.contacts[contact];
-            if ( data !== '' && data !== null && data !== undefined && data !== 'null' ) {
-                if ( data.indexOf( 'https://' ) ) {
-                    data = `https://${data}`;
-                }
-                contacts.push( <div><span>{ contact }</span><a target='_blank' rel="noreferrer" href={ data }>{ data }</a></div> );
-            }
-        }
-    }
     return (
         <div className={ s.profileWrapper }>
             <div className='global-block-title'>Profile Info</div>
             <div className={ s.contentInner }>
                 <span className={ s.name }>Name: <span>{ props.profile.fullName }</span></span>
-                <span className={ s.name }>Name: <span>{ props.profile.fullName }</span></span>
             </div>
-            <div className={ s.socialInner }>
-                { contacts }
-            </div>
+            { !editMode
+                ? <div className={ s.socialInner }>
+                    { props.isOwner &&
+                    <div>
+                        <button onClick={() => {setEditMode(true)}}>edit</button>
+                    </div>
+                    }
+                    {
+                        Object.keys( props.profile.contacts ).map( key =>
+                            <ProfileContacts contactKey={ key }
+                                             contactValue={ props.profile.contacts[key] }
+                                             isOwner={ props.isOwner }
+                                             goToeditMode={ () => {setEditMode( true );} }/>
+                        )
+                    }
+                </div>
+                : <div className={ s.socialInner }>
+                    <ProfileForm/>
+                </div> }
         </div>
     );
 };
